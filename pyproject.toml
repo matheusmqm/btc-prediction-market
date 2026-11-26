@@ -1,0 +1,33 @@
+[project]
+name = "btc-prediction-market"
+version = "0.1.0"
+description = "Coleta dados dos mercados BTC Up or Down de 15 minutos da Polymarket e o preço da Binance"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    "httpx>=0.28.1",
+    "websockets>=17.4",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=9.2.0",
+    "ruff>=0.17.6",
+]
+
+[build-system]
+requires = ["uv_build>=0.11,<0.12"]
+build-backend = "uv_build"
+
+[tool.uv.build-backend]
+module-name = "btc_market"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+extend-exclude = ["spike"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]

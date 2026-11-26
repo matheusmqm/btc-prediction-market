@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.py[oc]
+build/
+dist/
+*.egg-info/
+.venv/
+.pytest_cache/
+.ruff_cache/
+
+# Dados e logs gerados pela coleta
+/data/
+/logs/
+*.db
+*.db-shm
+*.db-wal
+
+# Editor
+.history/
+/docs
+CLAUDE.md
